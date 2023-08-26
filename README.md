@@ -1,4 +1,4 @@
-# AUTOMATIZACIÓN DE WEB - [DEMOBLAZE](https://www.demoblaze.com/)
+# AUTOMATIZACIÓN WEB - [DEMOBLAZE](https://www.demoblaze.com/)
 
 Este proyecto de automatización para la aplicación web demoblaze esta hecho con las herramientas Selenium Web Driver y
 desarrollado con Java 1.8.
