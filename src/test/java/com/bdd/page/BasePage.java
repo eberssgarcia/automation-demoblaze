@@ -76,7 +76,6 @@ public class BasePage {
         }
     }
 
-
     public String getAlertText() {
         try {
             Alert alert = wait.until(ExpectedConditions.alertIsPresent());
@@ -88,7 +87,6 @@ public class BasePage {
             return null;
         }
     }
-
 
     public String textFromElement(String locator) {
         return Find(locator).getText();

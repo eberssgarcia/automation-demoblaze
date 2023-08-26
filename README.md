@@ -1,6 +1,6 @@
-# Framework de automatización
+# AUTOMATIZACIÓN DE WEB - [DEMOBLAZE](https://www.demoblaze.com/)
 
-Este framework de automatización para aplicaciones web esta hecho con las herramientas Selenium Web Driver y
+Este proyecto de automatización para la aplicación web demoblaze esta hecho con las herramientas Selenium Web Driver y
 desarrollado con Java 1.8.
 
 # Herramientas y/o tecnologías a usar
@@ -67,11 +67,11 @@ tests.
 
 ##### Para ejecutar los features de web, de manera independiente, utilizar lo siguiente:
 
-| web feature                              | TAG             |
+| web Feature                              | TAG             |
 |------------------------------------------|-----------------|
 | Ejecución de todos los casos de pruebas. | @test-execution |
 | Ejecutar casos de pruebas agrupados      | @test-group     |
-| Ejecutar casos de pruenas independientes | @test-set       | 
+| Ejecutar casos de pruebas independientes | @test-**        | 
 
 # Ejecutar a través de navegador FireFox
 
@@ -79,6 +79,9 @@ tests.
 
 * // FirefoxOptions firefoxOptions = new FirefoxOptions();
 * // driver = new FirefoxDriver(firefoxOptions);
+
+* // ChromeOptions chromeOptions = new ChromeOptions();
+* // driver = new ChromeDriver(chromeOptions);
 
 # Ver reporte de ejecución de casos de pruebas
 
