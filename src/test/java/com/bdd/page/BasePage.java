@@ -5,13 +5,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
-import java.util.List;
 
 public class BasePage {
 
@@ -20,10 +17,21 @@ public class BasePage {
 
 
     static {
-        FirefoxOptions firefoxOptions = new FirefoxOptions();
+        // Configuración para Chrome
+        System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
 //        ChromeOptions chromeOptions = new ChromeOptions();
+//        chromeOptions.addArguments("--no-sandbox");
+//        chromeOptions.addArguments("--disable-dev-shm-usage");
+//        chromeOptions.addArguments("--remote-allow-origins=*");
 //        driver = new ChromeDriver(chromeOptions);
+
+        // Configuración para Firefox
+        System.setProperty("webdriver.gecko.driver", "./drivers/geckodriver.exe");
+        FirefoxOptions firefoxOptions = new FirefoxOptions();
+        firefoxOptions.addArguments("--no-sandbox");
+        firefoxOptions.addArguments("--disable-dev-shm-usage");
         driver = new FirefoxDriver(firefoxOptions);
+
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 

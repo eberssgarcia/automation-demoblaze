@@ -11,7 +11,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         stepNotifications = true,
         plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:", "json:target/cucumber-reports.json"},
-        tags = "@test-02")
+        tags = "@test-01")
 
 public class RunnerTest {
     @AfterClass

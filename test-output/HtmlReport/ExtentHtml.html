@@ -40,6 +40,7 @@
 		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
 			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
 			<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
+			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
 			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
 		</ul>
 		<!-- report name -->
@@ -49,7 +50,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>ago 26, 2023 12:34:54 AM</span>
+			<span class='label blue darken-3 suite-start-time'>ago 28, 2023 04:40:29 PM</span>
 			</a>
 		</ul>
 	</div>
@@ -64,7 +65,7 @@
 				<i class='material-icons'>warning</i> Status
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
-										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+										<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -76,9 +77,9 @@
 				<i class='material-icons'>local_offer</i> Category
 				</a>
 				<ul id='category-toggle' class='dropdown-content'>
-					<li><a href='#'>@text-execution</a></li>
-					<li><a href='#'>@test-02</a></li>
 					<li><a href='#'>@test-group</a></li>
+					<li><a href='#'>@test-01</a></li>
+					<li><a href='#'>@text-execution</a></li>
 					<li class='divider'></li>
 					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
 				</ul>
@@ -120,12 +121,12 @@
                     <canvas id='parent-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='$100%'>
-                    <span class='strong'>1</span> features passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='$0%'>
+                    <span class='strong'>0</span> features passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
-                    0</span> features failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>
+                    1</span> features failed, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
                     0</span> skipped
                 </div>
@@ -138,12 +139,12 @@
                     <canvas id='child-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'>
-                    <span class='strong'>2</span> scenarios passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='0%'>
+                    <span class='strong'>0</span> scenarios passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
-                    0</span> scenarios failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>
+                    2</span> scenarios failed, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
                     0</span> skipped, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
@@ -158,12 +159,12 @@
                     <canvas id='grandchild-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'>
-                    <span class='strong'>10</span> steps passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='75%'>
+                    <span class='strong'>6</span> steps passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
-                    0</span> steps failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='25%'>
+                    2</span> steps failed, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
                     0</span> skipped, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
@@ -186,11 +187,11 @@
 	<div class='subview-left left'>
 		<div class='view-summary'>
 			<ul id='test-collection' class='test-collection'>
-				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
+				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>Dar de alta a usuario y agregar producto a carrito de compras</span>
-						<span class='test-time'>ago 26, 2023 12:34:55 AM</span>
-						<span class='test-status right pass'>Pass</span>
+						<span class='test-time'>ago 28, 2023 04:40:29 PM</span>
+						<span class='test-status right fail'>Fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class="sr-filters bdd-filters">
@@ -203,24 +204,24 @@
   Quiero darme de alta en la plataforma Demoblaze
   Para agregar productos al carrito de compras</div>
 
-<div class='scenario outline node' test-id='2' status='pass'>
+<div class='scenario outline node' test-id='2' status='fail'>
 
-	<span class='duration right label'>00 00 12.824</span>
+	<span class='duration right label'>00 00 10.114</span>
 	<div class="bdd-test">
-		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario Outline: Login y logout con el usuario dado de alta - OK</div>
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario Outline: Dar de alta usuario ingresando valores correctos - OK</div>
 	</div>
 	
 		<div class='node-desc'><br><br><table class='markup-table table '><tr><td>usuario</td><td>password</td></tr><tr><td>prueba000008</td><td>12345</td></tr><tr><td>prueba000006</td><td>12345</td></tr></table></div>
 	
 	
 	<ul class='steps'>
-		<li test-id='3' class='node scenario Pass' status='Pass'>
-			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Login y logout con el usuario dado de alta - OK</div>
+		<li test-id='3' class='node scenario Fail' status='Fail'>
+			<div class="step-name" title="()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Dar de alta usuario ingresando valores correctos - OK</div>
 
 				<div class='category-list'>
 						<span class='category label'>@text-execution</span>
+						<span class='category label'>@test-01</span>
 						<span class='category label'>@test-group</span>
-						<span class='category label'>@test-02</span>
 				</div>
 
 			<ul class='gc steps'>
@@ -229,52 +230,56 @@
 
 				</li>
 				<li test-id='5' class='gc and Pass' status='Pass'>
-					<h6 class="step-name" title="com.bdd.steps.DemoblazeSteps.luegoIngresoALogIn()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Y luego ingreso a Log in</h6>
+					<h6 class="step-name" title="com.bdd.steps.DemoblazeSteps.ingresoASignUp()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Y luego ingreso a Sign Up</h6>
 
 				</li>
 				<li test-id='6' class='gc when Pass' status='Pass'>
-					<h6 class="step-name" title="com.bdd.steps.DemoblazeSteps.ingresoLosCamposRequeridosDe(java.lang.String,java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Cuando ingreso los campos requeridos de "prueba000008" "12345"</h6>
+					<h6 class="step-name" title="com.bdd.steps.DemoblazeSteps.completoLosCamposRequeridosDe(java.lang.String,java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Cuando completo los campos requeridos de "prueba000008" "12345"</h6>
 
 				</li>
-				<li test-id='7' class='gc then Pass' status='Pass'>
-					<h6 class="step-name" title="com.bdd.steps.DemoblazeSteps.validarUsuarioLogeado(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Entonces validar inicio de sesion con "prueba000008"</h6>
+				<li test-id='7' class='gc then Fail' status='Fail'>
+					<h6 class="step-name" title="com.bdd.steps.DemoblazeSteps.validarQueAlertaDeRegistro()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Entonces validar que alerta de registro</h6>
 
-				</li>
-				<li test-id='8' class='gc and Pass' status='Pass'>
-					<h6 class="step-name" title="com.bdd.steps.DemoblazeSteps.clicToLogOut()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Y hago clic en Log out</h6>
-
+							<textarea disabled class="code-block">org.junit.ComparisonFailure: expected:<[Sign up successful].> but was:<[This user already exist].>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at com.bdd.steps.DemoblazeSteps.validarQueAlertaDeRegistro(DemoblazeSteps.java:34)
+	at ✽.validar que alerta de registro(file:///C:/Users/garci/Intellig%20Projects/Linkedin%20Learning/ChallengeBaufest/src/test/resources/features/demoblaze.feature:14)
+</textarea>
 				</li>
 			</ul>
 		</li>
-		<li test-id='9' class='node scenario Pass' status='Pass'>
-			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Login y logout con el usuario dado de alta - OK</div>
+		<li test-id='8' class='node scenario Fail' status='Fail'>
+			<div class="step-name" title="()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Dar de alta usuario ingresando valores correctos - OK</div>
 
 				<div class='category-list'>
 						<span class='category label'>@text-execution</span>
+						<span class='category label'>@test-01</span>
 						<span class='category label'>@test-group</span>
-						<span class='category label'>@test-02</span>
 				</div>
 
 			<ul class='gc steps'>
-				<li test-id='10' class='gc given Pass' status='Pass'>
+				<li test-id='9' class='gc given Pass' status='Pass'>
 					<h6 class="step-name" title="com.bdd.steps.DemoblazeSteps.navigateToDemoblaze()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Dado que estoy en la plataforma Demoblaze</h6>
 
 				</li>
-				<li test-id='11' class='gc and Pass' status='Pass'>
-					<h6 class="step-name" title="com.bdd.steps.DemoblazeSteps.luegoIngresoALogIn()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Y luego ingreso a Log in</h6>
+				<li test-id='10' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.bdd.steps.DemoblazeSteps.ingresoASignUp()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Y luego ingreso a Sign Up</h6>
 
 				</li>
-				<li test-id='12' class='gc when Pass' status='Pass'>
-					<h6 class="step-name" title="com.bdd.steps.DemoblazeSteps.ingresoLosCamposRequeridosDe(java.lang.String,java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Cuando ingreso los campos requeridos de "prueba000006" "12345"</h6>
+				<li test-id='11' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="com.bdd.steps.DemoblazeSteps.completoLosCamposRequeridosDe(java.lang.String,java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Cuando completo los campos requeridos de "prueba000006" "12345"</h6>
 
 				</li>
-				<li test-id='13' class='gc then Pass' status='Pass'>
-					<h6 class="step-name" title="com.bdd.steps.DemoblazeSteps.validarUsuarioLogeado(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Entonces validar inicio de sesion con "prueba000006"</h6>
+				<li test-id='12' class='gc then Fail' status='Fail'>
+					<h6 class="step-name" title="com.bdd.steps.DemoblazeSteps.validarQueAlertaDeRegistro()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Entonces validar que alerta de registro</h6>
 
-				</li>
-				<li test-id='14' class='gc and Pass' status='Pass'>
-					<h6 class="step-name" title="com.bdd.steps.DemoblazeSteps.clicToLogOut()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Y hago clic en Log out</h6>
-
+							<textarea disabled class="code-block">org.junit.ComparisonFailure: expected:<[Sign up successful].> but was:<[This user already exist].>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at com.bdd.steps.DemoblazeSteps.validarQueAlertaDeRegistro(DemoblazeSteps.java:34)
+	at ✽.validar que alerta de registro(file:///C:/Users/garci/Intellig%20Projects/Linkedin%20Learning/ChallengeBaufest/src/test/resources/features/demoblaze.feature:14)
+</textarea>
 				</li>
 			</ul>
 		</li>
@@ -324,91 +329,15 @@
 			<ul id='category-collection' class='category-collection'>
 				<li class='category displayed active'>
 					<div class='category-heading'>
-						<span class='category-name'>@text-execution</span>
-						<span class='category-status right'>
-						<span class='label pass'>2</span>
-						</span>
-					</div>
-					<div class='category-content hide'>
-						<div class='category-status-counts'>
-							<span status="pass" class='label green accent-4 white-text'>Passed: 2</span>
-							
-							
-						</div>
-						<div class='category-tests'>
-							<table class='bordered table-results'>
-								<thead>
-									<tr>
-										<th>Timestamp</th>
-										<th>TestName</th>
-										<th>Status</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>ago 26, 2023 12:34:55 AM</td>
-										<td class='linked' test-id='3'>Login y logout con el usuario dado de alta - OK</td>
-										<td><span class='test-status Pass'>Pass</span></td>
-									</tr>
-									<tr>
-										<td>ago 26, 2023 12:35:05 AM</td>
-										<td class='linked' test-id='9'>Login y logout con el usuario dado de alta - OK</td>
-										<td><span class='test-status Pass'>Pass</span></td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</li>
-				<li class='category displayed active'>
-					<div class='category-heading'>
-						<span class='category-name'>@test-02</span>
-						<span class='category-status right'>
-						<span class='label pass'>2</span>
-						</span>
-					</div>
-					<div class='category-content hide'>
-						<div class='category-status-counts'>
-							<span status="pass" class='label green accent-4 white-text'>Passed: 2</span>
-							
-							
-						</div>
-						<div class='category-tests'>
-							<table class='bordered table-results'>
-								<thead>
-									<tr>
-										<th>Timestamp</th>
-										<th>TestName</th>
-										<th>Status</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>ago 26, 2023 12:34:55 AM</td>
-										<td class='linked' test-id='3'>Login y logout con el usuario dado de alta - OK</td>
-										<td><span class='test-status Pass'>Pass</span></td>
-									</tr>
-									<tr>
-										<td>ago 26, 2023 12:35:05 AM</td>
-										<td class='linked' test-id='9'>Login y logout con el usuario dado de alta - OK</td>
-										<td><span class='test-status Pass'>Pass</span></td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</li>
-				<li class='category displayed active'>
-					<div class='category-heading'>
 						<span class='category-name'>@test-group</span>
 						<span class='category-status right'>
-						<span class='label pass'>2</span>
+						<span class='label fail'>2</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
-							<span status="pass" class='label green accent-4 white-text'>Passed: 2</span>
 							
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 2</span>
 							
 						</div>
 						<div class='category-tests'>
@@ -422,14 +351,90 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>ago 26, 2023 12:34:55 AM</td>
-										<td class='linked' test-id='3'>Login y logout con el usuario dado de alta - OK</td>
-										<td><span class='test-status Pass'>Pass</span></td>
+										<td>ago 28, 2023 04:40:29 PM</td>
+										<td class='linked' test-id='3'>Dar de alta usuario ingresando valores correctos - OK</td>
+										<td><span class='test-status Fail'>Fail</span></td>
 									</tr>
 									<tr>
-										<td>ago 26, 2023 12:35:05 AM</td>
-										<td class='linked' test-id='9'>Login y logout con el usuario dado de alta - OK</td>
-										<td><span class='test-status Pass'>Pass</span></td>
+										<td>ago 28, 2023 04:40:38 PM</td>
+										<td class='linked' test-id='8'>Dar de alta usuario ingresando valores correctos - OK</td>
+										<td><span class='test-status Fail'>Fail</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@test-01</span>
+						<span class='category-status right'>
+						<span class='label fail'>2</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 2</span>
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>ago 28, 2023 04:40:29 PM</td>
+										<td class='linked' test-id='3'>Dar de alta usuario ingresando valores correctos - OK</td>
+										<td><span class='test-status Fail'>Fail</span></td>
+									</tr>
+									<tr>
+										<td>ago 28, 2023 04:40:38 PM</td>
+										<td class='linked' test-id='8'>Dar de alta usuario ingresando valores correctos - OK</td>
+										<td><span class='test-status Fail'>Fail</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@text-execution</span>
+						<span class='category-status right'>
+						<span class='label fail'>2</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 2</span>
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>ago 28, 2023 04:40:29 PM</td>
+										<td class='linked' test-id='3'>Dar de alta usuario ingresando valores correctos - OK</td>
+										<td><span class='test-status Fail'>Fail</span></td>
+									</tr>
+									<tr>
+										<td>ago 28, 2023 04:40:38 PM</td>
+										<td class='linked' test-id='8'>Dar de alta usuario ingresando valores correctos - OK</td>
+										<td><span class='test-status Fail'>Fail</span></td>
 									</tr>
 								</tbody>
 							</table>
@@ -445,7 +450,79 @@
 		</div>
 	</div>
 </div>
-<!-- category view --><div id='dashboard-view' class='view hide'>
+<!-- category view --><div id='exception-view' class='view hide'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='exception-collection' class='exception-collection'>
+				<li class='exception displayed active'>
+					<div class='exception-heading'>
+						<span class='exception-name'>org.junit.ComparisonFailure</span>
+						<span class='exception-count right'><span class='label red lighten-1 white-text'>2</span></span>
+					</div>
+					<div class='exception-content hide'>
+						<div class='exception-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>StackTrace</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>ago 28, 2023 04:40:37 PM</td>
+										<td class='linked' test-id='7'>Entonces validar que alerta de registro</td>
+										<td>
+											<textarea disabled class="code-block">org.junit.ComparisonFailure: expected:<[Sign up successful].> but was:<[This user already exist].>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at com.bdd.steps.DemoblazeSteps.validarQueAlertaDeRegistro(DemoblazeSteps.java:34)
+	at ✽.validar que alerta de registro(file:///C:/Users/garci/Intellig%20Projects/Linkedin%20Learning/ChallengeBaufest/src/test/resources/features/demoblaze.feature:14)
+</textarea>
+										</td>
+									</tr>
+									<tr>
+										<td>ago 28, 2023 04:40:39 PM</td>
+										<td class='linked' test-id='12'>Entonces validar que alerta de registro</td>
+										<td>
+											<textarea disabled class="code-block">org.junit.ComparisonFailure: expected:<[Sign up successful].> but was:<[This user already exist].>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at com.bdd.steps.DemoblazeSteps.validarQueAlertaDeRegistro(DemoblazeSteps.java:34)
+	at ✽.validar que alerta de registro(file:///C:/Users/garci/Intellig%20Projects/Linkedin%20Learning/ChallengeBaufest/src/test/resources/features/demoblaze.feature:14)
+</textarea>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='exception-name'></h5>
+		</div>
+	</div>
+</div>
+<!-- exception view --><div id='dashboard-view' class='view hide'>
 	<div class='card-panel transparent np-v'>
 		<h5>Dashboard</h5>
 
@@ -465,25 +542,25 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>10</div>
+					<div class='panel-lead'>8</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>ago 26, 2023 12:34:54 AM</div>
+					<div class='panel-lead'>ago 28, 2023 04:40:29 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>ago 26, 2023 12:35:08 AM</div>
+			 		<div class='panel-lead'>ago 28, 2023 04:40:39 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>00 00 13.320</div>
+					<div class='panel-lead'>00 00 10.654</div>
 				</div>
 			</div>
 			<div class='col s6'>
@@ -499,30 +576,30 @@
 							<th>Passed %</th>
 						</tr>
 						<tr>
-							<td>@text-execution</td>
-							<td>2</td>
-							<td>0</td>
-							<td>0</td>
-							<td>
-									100%
-							</td>
-						</tr>
-						<tr>
-							<td>@test-02</td>
-							<td>2</td>
-							<td>0</td>
-							<td>0</td>
-							<td>
-									100%
-							</td>
-						</tr>
-						<tr>
 							<td>@test-group</td>
+							<td>0</td>
 							<td>2</td>
 							<td>0</td>
+							<td>
+									0%
+							</td>
+						</tr>
+						<tr>
+							<td>@test-01</td>
+							<td>0</td>
+							<td>2</td>
 							<td>0</td>
 							<td>
-									100%
+									0%
+							</td>
+						</tr>
+						<tr>
+							<td>@text-execution</td>
+							<td>0</td>
+							<td>2</td>
+							<td>0</td>
+							<td>
+									0%
 							</td>
 						</tr>
 					</table>
@@ -537,23 +614,23 @@
 		<script>
 			var statusGroup = {
                 parentCount: 1,
-				passParent: 1,
-				failParent: 0,
+				passParent: 0,
+				failParent: 1,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
 				childCount: 2,
-				passChild: 2,
-				failChild: 0,
+				passChild: 0,
+				failChild: 2,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
 				infoChild: 0,
-				grandChildCount: 10,
-				passGrandChild: 10,
-				failGrandChild: 0,
+				grandChildCount: 8,
+				passGrandChild: 6,
+				failGrandChild: 2,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
@@ -564,7 +641,7 @@
 		
 		<script>
 			var timeline = {
-			        "Dar de alta a usuario y agregar producto a carrito de compras":12.829
+			        "Dar de alta a usuario y agregar producto a carrito de compras":10.119
 			};
 		</script>
 		
