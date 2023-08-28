@@ -75,13 +75,9 @@ tests.
 
 # Ejecutar a través de navegador FireFox
 
-#### Para habilitar  la ejecución con otro navegador, descomente la línea subrayado debajo que esta en el archivo BasePage.
+#### Para habilitar  la ejecución con otro navegador, descomente el bloque línea subrayado. Ojo, la ejecución solo debe realizarce con un solo navegador a la vez. No olvide de descargar el driver y cargarlo en su proyecto.
 
-* // FirefoxOptions firefoxOptions = new FirefoxOptions();
-* // driver = new FirefoxDriver(firefoxOptions);
-
-* // ChromeOptions chromeOptions = new ChromeOptions();
-* // driver = new ChromeDriver(chromeOptions);
+![Configuración para ejecutar casos de prueba con diferentes navegadores](/img/configuración_driver.png)
 
 # Ver reporte de ejecución de casos de pruebas
 
